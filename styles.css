@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.parent-nav {
+    height: 100%;
+    display: flex;
+}
+
+.navbar-head {
+    /* border: 1px solid red; */
+
+    font-size: 1.1rem;
+    margin: 1rem 0 0 0;
+
+    cursor: pointer;
+
+    font-family: 'Bree Serif', serif;
+}
+
+.navbar {
+    width: 6rem;
+    height: 100%;
+    /* border: 1px solid red; */
+    background-color: aqua;
+
+    padding: 0 1rem;
+
+    /* justify-content: center; */
+
+    /* justify-content: space-around; */
+}
+
+.navbar-items {
+    /* border: 1px solid red; */
+
+    margin: 5rem;
+    padding: 1rem;
+
+    /* display: flex; */
+    /* justify-content: space-around; */
+
+    /* height: ; */
+}
+
+.nav-item {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    
+    cursor: pointer;
+}
+
+.collapsible {
+    width: 6rem;
+    height: 100%;
+    padding: 1rem;
+
+    background-color: rgb(0, 113, 113);
+    font-family: 'Bree Serif', serif;
+
+    position: relative;
+    /* left: 10px; */
+    right: 8rem;
+    
+    z-index: -1;
+}
+
+.nav-texts {
+    margin: 9rem 0;
+}
+
+.text-item {
+    margin: 1.6rem 0;
+}
+
+
+@keyframes un-collapse-nav {
+    0% {
+        right: 8rem;
+    }
+
+    /* 75% {
+        right: 4rem;
+    } */
+
+    100% {
+        right: 0;
+    }
+}
+
+.nav-un-collapse {
+    animation: un-collapse-nav 1s forwards;
+}
+
+@keyframes collapse-nav {
+    0% {
+        right: 0;
+    }
+
+    /* 75% {
+        right: 4rem;
+    } */
+
+    100% {
+        right: 8rem;
+    }
+}
+
+.nav-collapse {
+    animation: collapse-nav 1s forwards;
+}
